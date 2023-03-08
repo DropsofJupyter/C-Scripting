@@ -12,6 +12,7 @@ int main(){
 
     unsigned long myVar = 4294967295;
     unsigned long long = 18446744073709551615
+    const int monthsPerYear = 12
 
     cout << static_cast<double>(5 * 35) << endl;
     cout << static_cast<int>(3.5 * (21 % 20)) << endl;
