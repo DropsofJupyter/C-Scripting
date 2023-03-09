@@ -1,4 +1,4 @@
-#include <iostream>
+ less#include <iostream>
 #include <cmath>
 #include <string>
 #include <cstdlib>
@@ -21,7 +21,7 @@ int main(){
     cout << rand() << endl;
     cout << "RAND_MAX: " << RAND_MAX << endl;
 
-    cout << "Modulo can be used to restrice output of rand()" << endl;
+    cout << "Modulo can be used to restrict output of rand()" << endl;
     cout << "to a specific number of possible values" << endl;
 
     cout << 123456789 % 3 << endl;

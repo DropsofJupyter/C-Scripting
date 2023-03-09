@@ -121,9 +121,34 @@ int main() {
     else {
         y = x;
     }
-// OR
+
+// OR Conditional expression
+// Variable Y = (condition) ? expr1 : expr2;
 
     y = (x < 100) ? 0 : x;
+
+
+
+// Logical operators inclue && - || -  !
+// ORDER OF LOGICAL OPERATORS
+/*
+-----------------------------
+
+()
+!
+*%/+-
+< <= > >=
+== !=
+&&
+|| 
+
+-----------------------------
+*/
+
+
+
+
+
 
 // FOR LOOP
 // for (initalExpression; conditionExpression; updateExpression) {
@@ -150,8 +175,105 @@ int main() {
     for (i = 0; i <= userNum; ++i) {
         for (j = 0; j < i; ++j) {
             cout << " ";
-            }
+        }
         cout << i << endl;
     }
 }
 
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    int numRows;
+    int numColumns;
+    int currentRow;
+    int currentColumn;
+    char currentColumnLetter;
+
+    cin >> numRows;
+    cin >> numColumns;
+
+    for (currentRow = 1; currentRow <= numRows; ++currentRow) {
+        currentColumnLetter = 'A';
+
+        for (currentColumn = 1; currentColumn <= numColumns; ++currentColumn) {
+            cout << currentRow << currentColumnLetter << " ";
+            ++currentColumnLetter;
+        }
+    }
+}
+
+int main() {
+    
+    enum HvacStatus {HVAC_OFF, AC_ON, FURNACE_ON};
+
+    HvacStatus systemStatus;
+
+    stystemStatus = AC_ON;
+}
+
+
+
+#include <vector>
+
+int main(){
+    const int NUM_VALS = 8;
+    unsigned int i;
+    int nthString;
+    vector <string> VName(NUM_VALS); // vector VName has 4 elements of string data type.
+    
+    VName.at(0) = "First string";
+    VName.at(1) = "Second string";
+    VName.at(2) = "Third string";
+    VName.at(3) = "Fourth string";
+
+    // Vector index must be of unsigned (positive) integer data type
+    // the index can be an expression.
+
+    cout << VName.at(3-1);
+
+    cin >> nthString
+
+    if ((nthString >= 1) && (nthString <= 4 )) {
+        cout << VName.at(nthString - 1)
+    }
+
+    for (i = 0; i < VName.size(); ++i) {
+        cout << "Value : ";
+        cin >> userVals.at(i);
+    }
+}
+
+#include <vector>
+
+int main() {
+    vector<int> myVector(3, -1); // creates a vector with all 3 initial values as -1
+    // note the perethesis instead of braces
+
+    vector<int> mySecondVect = {5, 7, 11} // creates a vector with three values 5, 7, 11
+
+    // assigning each vector value via for loops may be necessary for larger vectors
+
+
+}
+
+int main() {
+   const int NUM_VALS = 4;
+   vector<int> courseGrades(NUM_VALS);
+   int i;
+
+   for (i = 0; i < courseGrades.size(); ++i) {
+      cin >> courseGrades.at(i);
+   }
+
+   for (i = 0; i < courseGrades.size(); ++i) {
+      cout << courseGrades.at(i) << " ";
+   }
+   cout << endl;
+   
+   for (i = courseGrades.size() - 1; i >= 0;--i) {
+      cout << courseGrades.at(i) << " ";
+   }
+   cout << endl;
+}
