@@ -1,3 +1,46 @@
+ less#include <iostream>
+#include <cmath>
+#include <string>
+#include <cstdlib>
+using namespace std;
+
+
+
+
+
+int main(){
+
+    unsigned long myVar = 4294967295;
+    unsigned long long = 18446744073709551615
+    const int monthsPerYear = 12
+
+    cout << static_cast<double>(5 * 35) << endl;
+    cout << static_cast<int>(3.5 * (21 % 20)) << endl;
+    cout << "unsigned 0 to 4,294,967,295 --- 32 bits" << myVar << endl;
+
+    cout << rand() << endl;
+    cout << "RAND_MAX: " << RAND_MAX << endl;
+
+    cout << "Modulo can be used to restrict output of rand()" << endl;
+    cout << "to a specific number of possible values" << endl;
+
+    cout << 123456789 % 3 << endl;
+    cout << 123456789 % 5 << endl;
+    cout << 123456789 % 8 << endl;
+
+    cout << "output possibilities will always be less than the modulo value." << endl;
+
+    cout << (rand() % 41) - 20 << "produces range from -20 to 20" << endl;
+    cout << "note that rand() is always positive" << endl;
+
+    cout << srand(time(0)); // unique seed based off the time
+    cout << rand()
+
+    cout << "changing the seed ensures a truely random sequence of numbers."
+}
+
+//G++ uncompiled_file.cpp -o compiled_filename
+
 #include <iostream> // allows use of cin and cout
 #include <cmath> // basic math functions
 #include <string> // for working with type string
@@ -277,3 +320,58 @@ int main() {
    }
    cout << endl;
 }
+
+// VOCABULARY // 
+vector.at()
+vector.resize()
+vector.size()
+vector.push_back()
+vector.pop_back()
+vector.back()
+vector1 = vector2 // not necessary to declar size of vector2, resizing is automatic
+vector1 == vector2 // compares equivalency
+
+
+// Reverse
+for (i = 0; i < revVctr.size() / 2; ++i) {
+    tmpValue = revVctr.at(i);  // These 3 statements swap
+    revVctr.at(i) = revVctr.at(revVctr.size() - 1 - i);
+    revVctr.at(revVctr.size() - 1 - i) = tmpValue;
+
+
+// TWO DiMENSIONAL ARRAYS
+
+int myArray[2][3] // has 2 tows and 3 columns
+
+int numVals[2][3] = { {22, 44, 66}, {97, 98, 99} };
+
+// OR
+
+int numVals[2][3] = {
+   {22, 44, 66}, // Row 0
+   {97, 98, 99}  // Row 1
+};
+
+
+//#include <cctype> functions
+// Character checking functions
+
+isalpha(c)
+isdigit(c) 
+isalnum(c) // true if alpha-numerica
+isspace(c)
+islower(c) // true if lowercase
+isupper(c) // true if uppercase
+isblank(c)
+isxdigit(c) // true if hexidecimal digit 0-9, a-f. A-F
+ispunct(c) // true if punctuation !"#%&()*+,-./:;<=>?@[\]^_'{|}~
+isprint(c)
+isprint(c) // ex: '\0' isn't printable
+iscntrl(c) // true if control character, any non-printable such as escape characters
+
+// Character conversion functions
+
+toupper(c) // converts uppercase alpha characters to uppercase. No effect on non-alpha
+tolower(c) // same but for lowercase
+
+
